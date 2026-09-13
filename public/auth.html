@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>TRUTH — Login</title>
+
+    <link
+        rel="stylesheet"
+        href="auth.css"
+    >
+
+</head>
+
+
+<body>
+
+    <div class="auth-page">
+
+        <div class="auth-card">
+
+            <div class="auth-logo">
+                TRUTH
+            </div>
+
+            <p class="auth-tagline">
+                Detect. Explain. Protect. Recover.
+            </p>
+
+
+            <!-- LOGIN -->
+
+            <div id="loginForm">
+
+                <h1>Welcome back</h1>
+
+                <p class="auth-description">
+                    Sign in to continue using TRUTH.
+                </p>
+
+
+                <form id="loginFormElement">
+
+                    <label for="loginEmail">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        placeholder="you@example.com"
+                        required
+                    >
+
+
+                    <label for="loginPassword">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Enter your password"
+                        required
+                    >
+
+
+                    <button
+                        type="submit"
+                        class="auth-button"
+                    >
+                        Sign In
+                    </button>
+
+                </form>
+
+
+                <p
+                    id="loginMessage"
+                    class="auth-message"
+                ></p>
+
+
+                <p class="switch-auth">
+
+                    Don't have an account?
+
+                    <button
+                        type="button"
+                        id="showSignup"
+                    >
+                        Create one
+                    </button>
+
+                </p>
+
+            </div>
+
+
+            <!-- SIGNUP -->
+
+            <div
+                id="signupForm"
+                class="hidden"
+            >
+
+                <h1>Create your account</h1>
+
+                <p class="auth-description">
+                    Start protecting yourself with TRUTH.
+                </p>
+
+
+                <form id="signupFormElement">
+
+                    <label for="signupEmail">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="signupEmail"
+                        placeholder="you@example.com"
+                        required
+                    >
+
+
+                    <label for="signupPassword">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="signupPassword"
+                        placeholder="Minimum 6 characters"
+                        minlength="6"
+                        required
+                    >
+
+
+                    <label for="signupConfirmPassword">
+                        Confirm Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="signupConfirmPassword"
+                        placeholder="Re-enter your password"
+                        minlength="6"
+                        required
+                    >
+
+
+                    <button
+                        type="submit"
+                        class="auth-button"
+                    >
+                        Create Account
+                    </button>
+
+                </form>
+
+
+                <p
+                    id="signupMessage"
+                    class="auth-message"
+                ></p>
+
+
+                <p class="switch-auth">
+
+                    Already have an account?
+
+                    <button
+                        type="button"
+                        id="showLogin"
+                    >
+                        Sign in
+                    </button>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
+
+    <script src="auth.js"></script>
+
+</body>
+
+</html>

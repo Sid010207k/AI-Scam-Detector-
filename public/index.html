@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRUTH — Scam Detection & Response</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">
+            <span class="logo-mark">T</span>
+            <span>TRUTH</span>
+        </div>
+
+        <div class="nav-tag">
+            AI Scam Detection & Response
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+    <main>
+
+        <section class="hero">
+
+            <div class="badge">
+                🛡️ Multimodal AI Protection
+            </div>
+
+            <h1>
+                Don't just detect scams.<br>
+                <span>Stop the damage.</span>
+            </h1>
+
+            <p>
+                Analyze suspicious messages and screenshots with AI,
+                understand why they are dangerous, and get personalized
+                steps to protect yourself.
+            </p>
+
+        </section>
+
+
+        <!-- ANALYZER -->
+        <section class="analyzer-card">
+
+            <div class="card-header">
+                <div>
+                    <h2>Analyze suspicious content</h2>
+                    <p>Paste a message or upload a screenshot.</p>
+                </div>
+
+                <div class="secure-badge">
+                    🔒 Secure Analysis
+                </div>
+            </div>
+
+
+            <!-- INPUT AREA -->
+            <div class="input-section">
+
+                <label for="messageInput">
+                    Suspicious message
+                </label>
+
+                <textarea
+                    id="messageInput"
+                    placeholder="Paste the suspicious SMS, WhatsApp message, email, job offer, payment request, or any other content here..."
+                ></textarea>
+
+            </div>
+
+
+          <!-- FILE UPLOAD -->
+<div class="upload-section">
+
+    <div class="upload-box">
+
+        <div class="upload-icon">
+            📷
+        </div>
+
+        <h3>Upload a screenshot</h3>
+
+        <p>
+            PNG, JPG or JPEG
+        </p>
+
+        <input
+            type="file"
+            id="imageInput"
+            accept="image/png, image/jpeg, image/jpg"
+        >
+
+        <div id="fileName"></div>
+
+    </div>
+
+    <div
+        id="imagePreviewContainer"
+        class="image-preview-container"
+    >
+        <img
+            id="imagePreview"
+            alt="Screenshot preview"
+        >
+    </div>
+
+</div>
+            <!-- ANALYZE BUTTON -->
+            <button id="analyzeBtn" class="analyze-button">
+
+                <span>🔍</span>
+                Analyze with TRUTH
+
+            </button>
+            <!-- =========================
+     USER SITUATION
+========================= -->
+
+<div class="situation-section">
+
+    <h3>What happened after you received it?</h3>
+
+    <p>
+        This helps TRUTH give you the right protection or recovery steps.
+    </p>
+
+    <div class="situation-options">
+
+        <button
+            type="button"
+            class="situation-option"
+            data-situation="none"
+        >
+            <span>🛡️</span>
+            <strong>I did nothing</strong>
+            <small>I haven't clicked, shared, or paid anything.</small>
+        </button>
+
+        <button
+            type="button"
+            class="situation-option"
+            data-situation="clicked"
+        >
+            <span>🔗</span>
+            <strong>I clicked the link</strong>
+            <small>I opened a suspicious link or website.</small>
+        </button>
+
+        <button
+            type="button"
+            class="situation-option"
+            data-situation="password"
+        >
+            <span>🔑</span>
+            <strong>I shared my password</strong>
+            <small>I entered or gave away login credentials.</small>
+        </button>
+
+        <button
+            type="button"
+            class="situation-option"
+            data-situation="otp"
+        >
+            <span>📱</span>
+            <strong>I shared an OTP</strong>
+            <small>I gave someone a verification code.</small>
+        </button>
+
+        <button
+            type="button"
+            class="situation-option"
+            data-situation="money"
+        >
+            <span>💳</span>
+            <strong>I sent money</strong>
+            <small>I made a payment or transfer.</small>
+        </button>
+
+    </div>
+
+</div>
+            
+            <p class="privacy-note">
+                TRUTH provides an AI-powered risk assessment.
+                Always independently verify important claims.
+            </p>
+
+        </section>
+
+
+        <!-- RESULT SECTION -->
+        <section id="resultSection" class="result-section hidden">
+
+            <div class="result-header">
+                <h2>TRUTH Analysis</h2>
+                <span id="riskBadge" class="risk-badge">
+                    Analyzing...
+                </span>
+            </div>
+
+
+            <!-- SCORE -->
+            <div class="result-grid">
+
+                <div class="score-card">
+
+                    <div class="score-circle">
+                        <span id="threatScore">--</span>
+                        <small>/100</small>
+                    </div>
+
+                    <h3>Threat Score</h3>
+
+                    <p id="riskDescription">
+                        Analysis pending
+                    </p>
+
+                </div>
+
+
+                <!-- CATEGORY -->
+                <div class="info-card">
+
+                    <h3>🚨 Scam Category</h3>
+
+                    <p id="scamCategory">
+                        --
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- RED FLAGS -->
+            <div class="analysis-card">
+
+                <h3>⚠️ Red Flags Detected</h3>
+
+                <ul id="redFlags">
+                    <li>Analysis pending...</li>
+                </ul>
+
+            </div>
+
+
+            <!-- EXPLANATION -->
+            <div class="analysis-card">
+
+                <h3>🧠 Why is this suspicious?</h3>
+
+                <p id="explanation">
+                    Analysis pending...
+                </p>
+
+            </div>
+
+
+            <!-- PROTECTION -->
+            <div class="analysis-card protection-card">
+
+                <h3>🛡️ What should you do?</h3>
+
+                <ol id="protectionSteps">
+                    <li>Analysis pending...</li>
+                </ol>
+
+            </div>
+
+
+            <!-- TIMELINE -->
+            <div class="analysis-card">
+
+                <h3>🎯 Attack Pattern</h3>
+
+                <div class="timeline">
+
+                    <div class="timeline-item">
+                        <span>1</span>
+                        <div>
+                            <strong>Fear</strong>
+                            <p>Create concern or anxiety</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span>2</span>
+                        <div>
+                            <strong>Urgency</strong>
+                            <p>Pressure the victim to act quickly</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span>3</span>
+                        <div>
+                            <strong>Isolation</strong>
+                            <p>Discourage independent verification</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span>4</span>
+                        <div>
+                            <strong>Request</strong>
+                            <p>Ask for credentials, OTP or money</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+    <!-- =========================
+     SCAN HISTORY
+========================= -->
+
+<section id="historySection" class="history-section">
+
+    <div class="history-header">
+
+        <div>
+            <span class="section-label">TRUTH MEMORY</span>
+
+            <h2>Scan History</h2>
+
+            <p>
+                Review your previous scam analyses and protection plans.
+            </p>
+        </div>
+
+        <button
+            id="refreshHistoryBtn"
+            class="history-refresh-btn"
+            type="button"
+        >
+            ↻ Refresh
+        </button>
+
+    </div>
+
+
+    <div id="historyContainer" class="history-container">
+
+        <div class="history-loading">
+            Loading your scan history...
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            TRUTH — AI-Powered Scam Detection & Response System
+        </p>
+
+        <p>
+            Built for safer digital experiences.
+        </p>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
